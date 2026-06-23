@@ -30,7 +30,10 @@
       --ink:             #0F172A;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg-main);
@@ -307,7 +310,7 @@
     }
 
     /* ── SECTION BASE ── */
-    section { padding: 100px 5vw; position: relative; }
+    section { padding: 100px 5vw; position: relative; overflow: hidden; }
     .section-eyebrow {
       font-size: 0.74rem; font-weight: 700;
       letter-spacing: 0.14em; text-transform: uppercase;
@@ -876,7 +879,10 @@
     /* ── RESPONSIVE ── */
     @media(max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+      nav { padding: 0 16px; }
       nav .nav-links { display: none; }
+      .nav-actions { gap: 0.8rem; }
+      .nav-cta { padding: 0.5rem 1.2rem; font-size: 0.8rem; }
       .hamburger-btn { display: flex; }
       .hero-stats { gap: 2rem; justify-content: space-between; }
       .stat-num { font-size: 2.4rem; }
